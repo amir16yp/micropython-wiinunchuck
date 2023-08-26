@@ -75,22 +75,23 @@ def nunchuk_roll(data):
 # Initialize Nunchuk
 nunchuk_init()
 
-while True:
-    nunchuk_data = nunchuk_read()
-
-    if nunchuk_buttonZ(nunchuk_data):
-        print("Button Z is pressed")
-    if nunchuk_buttonC(nunchuk_data):
-        print("Button C is pressed")
-
-    print("Joystick X:", nunchuk_joystickX(nunchuk_data))
-    print("Joystick Y:", nunchuk_joystickY(nunchuk_data))
-    print("Accelerometer X:", nunchuk_accelX(nunchuk_data))
-    print("Accelerometer Y:", nunchuk_accelY(nunchuk_data))
-    print("Accelerometer Z:", nunchuk_accelZ(nunchuk_data))
-    print("Pitch:", nunchuk_pitch(nunchuk_data))
-    print("Roll:", nunchuk_roll(nunchuk_data))
-    print("Joystick Angle:", nunchuk_joystick_angle(nunchuk_data))
+if __name__ == "__main__":
+    while True:
+        nunchuk_data = nunchuk_read()
     
-    time.sleep(0.5)
+        if nunchuk_buttonZ(nunchuk_data):
+            print("Button Z is pressed")
+        if nunchuk_buttonC(nunchuk_data):
+            print("Button C is pressed")
+    
+        print("Joystick X:", nunchuk_joystickX(nunchuk_data))
+        print("Joystick Y:", nunchuk_joystickY(nunchuk_data))
+        print("Accelerometer X:", nunchuk_accelX(nunchuk_data))
+        print("Accelerometer Y:", nunchuk_accelY(nunchuk_data))
+        print("Accelerometer Z:", nunchuk_accelZ(nunchuk_data))
+        print("Pitch:", nunchuk_pitch(nunchuk_data))
+        print("Roll:", nunchuk_roll(nunchuk_data))
+        print("Joystick Angle:", nunchuk_joystick_angle(nunchuk_data))
+        
+        time.sleep(0.5)
 
