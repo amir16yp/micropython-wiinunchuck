@@ -72,10 +72,11 @@ def nunchuk_pitch(data):
 def nunchuk_roll(data):
     return math.atan2(nunchuk_accelX(data), nunchuk_accelZ(data))
 
-# Initialize Nunchuk
-nunchuk_init()
+
 
 if __name__ == "__main__":
+    # Initialize Nunchuk
+    nunchuk_init()
     while True:
         nunchuk_data = nunchuk_read()
     
